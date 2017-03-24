@@ -1,15 +1,16 @@
 The aim of this project was to create an efficient driver for a high power led.
 The brain of the circuit is a PIC16F18313 from Microchip. The basic advantage it
 gives us is the PPS functionality, allowing us to map the input and/or output of 
-some peripherals. Furthermore it 's an XLP device which means that the power consumption
-is minimal. To power the circuit we use Maxim's MAX1797 DC-DC converter. The chip 
-contains many features but i will refer only some basics. We can use any source or a
-single cell battery in a range of 0.85V to 5V. The MAX1797 contains an on-chip comparator
-for low-battery shutdown. I added a jumper(JP3) as the low-battery voltage selector. 
-In position 1 the threshold is 0.85V(e.g. Alkaline Batteries) and in position 2 the 
-threshold is 2.7V(e.g. Lithium Batteries). The input is protected from an overvoltage
-event with a reverse polarized zener diode. Furthermore, the battery voltage is monitored
-with an ADC channel of the microcontroller. The LED can be powered directly from the 
-battery or from the DC-DC converter(JP5). To set the brightness of the led we use a
-PWM channel of the microcontroller. The PWD controls a mosfet driver(UCC27511) from 
-Texas Instruments.
+some peripherals to the pins. Furthermore it 's an XLP device which means that the 
+power consumption is minimal. To power the circuit we use Maxim's MAX1797 DC-DC 
+converter. The chip contains many features but i will refer only some basics. We 
+can use any source or a single cell battery in a range of 0.85V to 5V. The MAX1797
+contains an on-chip comparator for low-battery shutdown. I added a jumper(JP3) as 
+the low-battery voltage selector. In position 1 the threshold is 0.85V(e.g. Alkaline
+Batteries) and in position 2 the threshold is 2.7V(e.g. Lithium Batteries). The input
+is protected from an overvoltage event with a reverse polarized zener diode. 
+Furthermore, the battery voltage is monitored with an ADC channel of the microcontroller.
+The LED can be powered directly from the battery or from the DC-DC converter(JP5). 
+To set the brightness of the led we use a PWM channel of the microcontroller. 
+The PWD controls a mosfet driver(UCC27511) from Texas Instruments and the driver switches
+the MOSFET(50N03-06) on and off.
