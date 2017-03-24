@@ -1,1 +1,5 @@
-
+The aim of this project was to create an efficient driver for a high power led.
+The heart of the circuit is a PIC16F18313 from Microchip. The basic advantage it
+gives us is the PPS functionality, allowing us to map the input and/or output of 
+some digital peripherals. Furthermore its an XLP device which means that the power
+consumption is minimal. 
