@@ -12,4 +12,4 @@ event with a reverse polarized zener diode. Furthermore, the battery voltage is 
 with an ADC channel of the microcontroller. The LED can be powered directly from the 
 battery or from the DC-DC converter(JP5). To set the brightness of the led we use a
 PWM channel of the microcontroller. The PWD controls a mosfet driver(UCC27511) from 
-Texas Instruments. 
+Texas Instruments.
